@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using TMPro;
 
-public class GameManager : MonoBehaviour
+public class Sphere : MonoBehaviour
 {
-    public TextMeshProUGUI textField;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -21,8 +18,9 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void UpdateText()
+    private void OnMouseDown()
     {
-        textField.text = "Welcome";
+       
+            gameManager.UpdateText();     
     }
 }
