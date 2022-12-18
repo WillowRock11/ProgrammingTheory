@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sphere : Shape
+public class Capsule : Shape
 {
-    
-   
+
 
     private void OnMouseDown()
     {
-        redValue = blueValue = greenValue = .5f;
         //gameManager.UpdateText(shapeName);
         UpdateName();
-        SetShapeColor();
+        SetShapeColor(.3f, .5f, .1f);
     }
+
+
 }

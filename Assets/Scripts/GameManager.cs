@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void UpdateText()
+    public void UpdateText(string labelText)
     {
-        textField.text = "Welcome";
+        textField.text = labelText;
     }
 }
